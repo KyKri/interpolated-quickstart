@@ -10,6 +10,8 @@ namespace InterpolatedStrings
     {
         static void Main(string[] args)
         {
+            var name = "<name>";
+            Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
         }
     }
 }
