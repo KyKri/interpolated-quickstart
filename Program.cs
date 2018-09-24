@@ -17,6 +17,8 @@ namespace InterpolatedStrings
             public override string ToString() => Name;
         }
 
+        public enum Unit { item, kilogram, gram, dozen };
+
         public void PrintName()
         {
             var name = "<name>";
@@ -25,7 +27,13 @@ namespace InterpolatedStrings
 
         static void Main(string[] args)
         {
-            
+            var item = new Vegetable("eggplant");
+            var date = DateTime.Now;
+            var price = 1.99m;
+            var unit = Unit.item;
+            Console.WriteLine($"On {date:d}, the price of {item} was {price:C2} per {unit}");
+
+            Console.ReadKey();
         }
     }
 }
