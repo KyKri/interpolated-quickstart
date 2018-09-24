@@ -19,19 +19,26 @@ namespace InterpolatedStrings
 
         public enum Unit { item, kilogram, gram, dozen };
 
-        public void PrintName()
+        public static void PrintName()
         {
             var name = "<name>";
             Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
         }
 
-        static void Main(string[] args)
+        public static void Eggplant()
         {
             var item = new Vegetable("eggplant");
             var date = DateTime.Now;
             var price = 1.99m;
             var unit = Unit.item;
             Console.WriteLine($"On {date:d}, the price of {item} was {price:C2} per {unit}");
+        }
+
+        static void Main(string[] args)
+        {
+            //Eggplant();
+
+            //PrintName();
 
             Console.ReadKey();
         }
