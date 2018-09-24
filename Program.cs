@@ -8,10 +8,24 @@ namespace InterpolatedStrings
 {
     class Program
     {
-        static void Main(string[] args)
+        public class Vegetable
+        {
+            public Vegetable(string name) => Name = name;
+
+            public string Name { get; }
+
+            public override string ToString() => Name;
+        }
+
+        public void PrintName()
         {
             var name = "<name>";
             Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
+        }
+
+        static void Main(string[] args)
+        {
+            
         }
     }
 }
